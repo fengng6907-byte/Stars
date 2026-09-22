@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "scripts": {
+    "check": "node --check dist/phone.js && node --check dist/profile.js && node --check dist/app.js && node --check dist/talent-v2.js && node scripts/test-profile.cjs && node scripts/test-talent-v2.cjs"
+  },
+  "dependencies": {
+    "country-flag-icons": "1.6.15",
+    "libphonenumber-js": "1.12.33"
+  }
+}

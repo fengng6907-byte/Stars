@@ -1,8 +1,8 @@
 const fs=require('fs'),vm=require('vm'),assert=require('node:assert/strict');
 const nodes=new Map();
 function node(selector){if(selector==='#talent-form')return null;if(!nodes.has(selector))nodes.set(selector,{innerHTML:'',textContent:'',style:{},value:'',close(){},showModal(){}});return nodes.get(selector)}
-const context=vm.createContext({console,Date,window:{},location:{hash:'#profile'},document:{querySelector:node,modelContext:undefined},setTimeout(){return 1},clearTimeout(){}});
-for(const file of ['profile.js','app.js','talent-v2.js'])vm.runInContext(fs.readFileSync(`dist/${file}`,'utf8'),context,{filename:file});
+const context=vm.createContext({console,Date,Intl,libphonenumber:require('libphonenumber-js/mobile'),window:{},location:{hash:'#profile'},document:{querySelector:node,addEventListener(){},modelContext:undefined},setTimeout(){return 1},clearTimeout(){}});
+for(const file of ['phone.js','profile.js','app.js','talent-v2.js'])vm.runInContext(fs.readFileSync(`dist/${file}`,'utf8'),context,{filename:file});
 let html=node('#app').innerHTML;
 assert.match(html,/My Profile/);
 assert.match(html,/Professional headline/);

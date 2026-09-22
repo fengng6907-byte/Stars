@@ -1,0 +1,20 @@
+/* Contact details: one compact international mobile control. */
+.phone-field{min-width:0;font-size:14px;font-weight:600}
+.phone-combined{display:flex;min-width:0;margin-top:8px;border:1px solid #d8e0e9;border-radius:8px;background:#fff;color:#20364d}
+.phone-combined:focus-within{outline:3px solid #4274e6;outline-offset:3px}
+.phone-country{position:relative;flex:0 0 auto;min-width:0;border-right:1px solid #d8e0e9}
+.phone-country-button{display:flex;align-items:center;gap:5px;height:100%;min-width:106px;padding:10px 12px;white-space:nowrap;font-size:14px}
+.phone-country-button span{margin-left:auto;color:#718095}
+.phone-flag{width:20px;height:15px;flex:none;object-fit:cover;border-radius:2px;box-shadow:0 0 0 1px #17283e16}
+.phone-combined #mobile-local{flex:1;min-width:0;width:0;margin:0;border:0;border-radius:0 8px 8px 0;padding:11px;background:transparent;color:inherit;font-weight:400}
+.phone-combined #mobile-local:focus-visible,.phone-country-button:focus-visible{outline:0}
+.phone-country-menu{position:absolute;z-index:20;top:calc(100% + 6px);left:0;width:min(330px,calc(100vw - 76px));max-width:calc(100vw - 32px);padding:9px;background:#fff;border:1px solid #d8e0e9;border-radius:8px;box-shadow:0 12px 28px #17283e24;font-weight:400}
+.phone-country-menu[hidden],.phone-error[hidden]{display:none}
+.phone-country-menu input{width:100%;margin:0 0 8px;border:1px solid #d8e0e9;border-radius:7px;padding:9px;background:#fff;color:#20364d;font-size:14px}
+#phone-country-options{max-height:245px;overflow-y:auto}
+#phone-country-options button{display:flex;gap:8px;align-items:center;width:100%;padding:9px 7px;text-align:left;border-radius:5px;font-size:14px}
+#phone-country-options button:hover,#phone-country-options button[aria-selected=true]{background:#edf2fa}
+#phone-country-options button span{margin-left:auto;color:#66788d;white-space:nowrap}
+.phone-no-results{padding:10px;color:#738195;font-size:14px}
+.phone-error{margin:6px 0 0;font-size:13px;font-weight:400}
+@media(max-width:390px){.phone-country-button{min-width:94px;padding:10px 8px;font-size:13px}.phone-combined #mobile-local{padding:10px 8px}}
