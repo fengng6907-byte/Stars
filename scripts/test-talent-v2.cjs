@@ -32,6 +32,9 @@ vm.runInContext("talentDraft.name='Private Candidate';talentDraft.email='secret@
 assert.match(node('#modal').innerHTML,/Anonymous professional/);
 assert.doesNotMatch(node('#modal').innerHTML,/Private Candidate|Private Employer|secret@example.com/);
 vm.runInContext("setMode('employer')",context);
-assert.match(node('#app').innerHTML,/Meet the collective/);
+assert.match(node('#app').innerHTML,/Good afternoon, Sarah/);
+assert.match(node('#app').innerHTML,/Your Active Roles/);
+vm.runInContext("navigate('talent')",context);
+assert.match(node('#app').innerHTML,/Talent discovery/);
 assert.match(node('#cards').innerHTML,/Sarah Lim/);
-console.log('PASS: existing profile preserved; talent overview, status, preferences, opportunity stages and privacy preview render.');
+console.log('PASS: talent overview, status, preferences, opportunity stages and privacy preview preserved; employer mode remains accessible.');

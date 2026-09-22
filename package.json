@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "check": "node --check dist/phone.js && node --check dist/profile.js && node --check dist/app.js && node --check dist/talent-v2.js && node scripts/test-profile.cjs && node scripts/test-talent-v2.cjs"
+    "check": "node --check dist/phone.js && node --check dist/profile.js && node --check dist/app.js && node --check dist/talent-v2.js && node scripts/test-profile.cjs && node scripts/test-talent-v2.cjs && node scripts/test-employer.cjs"
   },
   "dependencies": {
     "country-flag-icons": "1.6.15",
